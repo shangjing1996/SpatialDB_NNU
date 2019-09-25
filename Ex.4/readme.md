@@ -1,4 +1,4 @@
-# 实验3  SQL*Plus基本操作
+# 实验4  空间数据查询
 
 ## 1. 使用ArcGIS Desktop按属性查询
 
