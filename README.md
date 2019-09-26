@@ -6,6 +6,6 @@
 
 ## [实验3  SQL\*Plus基本操作](https://github.com/solidjerryc/SpatialDB_NNU/tree/master/Ex.3 "实验3")
 
-## [实验4  空间数据查询](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.4 "实验4")
+## [实验5  空间数据查询](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.5 "实验4")
 
 ## TODO
