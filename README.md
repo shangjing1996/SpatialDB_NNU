@@ -8,4 +8,6 @@
 
 ## [实验4-1  SQL数据定义语言](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.4-1 "实验4-1")
 
+## [实验4-2  SQL数据定义语言（2）](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.4-1 "实验4-1")
+
 ## TODO
