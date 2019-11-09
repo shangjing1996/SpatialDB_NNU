@@ -16,4 +16,6 @@
 
 ## [实验7  SQL查询与数据操纵语言](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.7 "实验7")
 
+## [实验8  空间数据查询](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.8 "实验8")
+
 ## TODO
