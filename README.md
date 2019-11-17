@@ -18,4 +18,6 @@
 
 ## [实验8-1  空间数据查询](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.8-1 "实验8-1")
 
+## [实验8-2  空间数据查询（2）](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.8-2 "实验8-2")
+
 ## TODO
