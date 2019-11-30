@@ -124,6 +124,7 @@
 (1)	Geometry_A和Geometry_B表示两个几何体。
 
 (2)	Mask参数可有下面几种选择
+
     Anyinteract: Geometry_B落在Geometry_A面上包括在边上。
     Contains: Geometry_B完全包含在Geometry_A几何对象中，并且两个几何对象的边没有交叉。 
     Coveredby: Geometry_A完全包含在Geometry_B中，并且这两个几何对象的边有一个或多个点相互重叠。 
