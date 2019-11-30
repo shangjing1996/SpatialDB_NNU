@@ -22,4 +22,6 @@
 
 ## [实验9  数据库的安全性](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.9 "实验9")
 
+## [实验10  Oracle空间查询](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.10 "实验10")
+
 ## TODO
