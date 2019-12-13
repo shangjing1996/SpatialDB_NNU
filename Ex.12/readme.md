@@ -3,6 +3,7 @@
 ## 1. 实验10答案 仅供参考
 
 （1）查询美国哪个/些州与其相邻的州最多
+
     SELECT S1.STATE_NAME, COUNT(*) xiang
     FROM STATES S1, STATES S2
     WHERE MDSYS.SDO_GEOM.RELATE(S1.SHAPE,'TOUCH',S2.SHAPE,0.5)='TOUCH'
@@ -10,12 +11,14 @@
     ORDER BY XIANG DESC;
 
 （2）查询70 号公路穿过了几个州？
+
     SELECT  H.ROUTE, COUNT(*) CHUAN
     FROM HIGHWAYS H, STATES S
     WHERE CROSS(MDSYS.ST_GEOMETRY(H.SHAPE),MDSYS.ST_GEOMETRY(S.SHAPE))=1 AND RTE_NUM1=' 70'
     GROUP BY H.ROUTE;
 
 （3）查询90 号公路附近 100 公里内的城市的名字？
+
     SELECT COUNT(*) FROM (
         SELECT DISTINCT C.AREANAME
         FROM CITIES C, HIGHWAYS H
@@ -27,6 +30,7 @@
 ## 2. 实验11答案 仅供参考
 
 建表：
+
     create table POINTS(
         id varchar2(10),
         name varchar2(10),
@@ -44,6 +48,7 @@
     );
 
 插入元数据：
+
     insert into MDSYS.user_sdo_geom_metadata(table_name,column_name,diminfo,srid)
     values('POINTS','SHAPE',mdsys.sdo_dim_array(
         mdsys.sdo_dim_element('X',0,10,0.00005),
@@ -58,11 +63,13 @@
         mdsys.sdo_dim_element('Y',0,10,0.00005)),4326);
 
 创建空间索引：
+
     create index points_idx on points(shape) indextype is mdsys.spatial_index;
     create index lines_idx on lines(shape) indextype is mdsys.spatial_index;
     create index polygons_idx on polygons(shape) indextype is mdsys.spatial_index;
 
 插入数据：
+
     SRID=4326指定了坐标系统为WGS84 度
     3857 投影坐标系 米
     insert into POINTS
@@ -109,6 +116,7 @@
                        4,0)));
 
 （1）计算所有线要素的长度与面要素的周长和面积
+
     select mdsys.sdo_geom.sdo_length(shape,0.005) length
     from lines;
     select mdsys.sdo_geom.sdo_length(shape,0.005) 周长,
@@ -116,21 +124,25 @@
     from polygons;
 
 （2）计算有多少个点落在蓝色的多边形内
+
     select count(a.name)
     from points a,polygons b
     where mdsys.sdo_geom.relate(a.shape,'INSIDE',b.shape,0.5)='INSIDE' and b.name='b';
 
 （3）求绿色线与蓝色多边形相交部分的长度
+
     select mdsys.sdo_geom.sdo_length(mdsys.sdo_geom.sdo_intersection(a.shape,b.shape,0.005),0.005) length
     from lines a,polygons b
     where a.name='L2' and b.name='b';
 
 （4）求点A到蓝色多边形的距离
+
     select mdsys.sdo_geom.sdo_distance(a.shape,b.shape,0.5) distance
     from points a,polygons b
     where a.name='A' and b.name='b';
 
 （5）求蓝色多边形与紫色多边形相交部分的面积
+
     select mdsys.sdo_geom.sdo_area(mdsys.sdo_geom.sdo_intersection(a.shape,b.shape,0.005),0.005) area
     from polygons a,polygons b
     where a.name='b' and b.name='p';
