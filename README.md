@@ -26,4 +26,6 @@
 
 ## [实验11  创建空间数据](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.11 "实验11")
 
+## [实验12  Oracle数据的导入与导出](https://github.com/shangjing1996/SpatialDB_NNU/tree/master/Ex.12 "实验12")
+
 ## TODO
